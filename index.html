@@ -27,6 +27,12 @@
         <img src="images/logo.png" class="logo-desktop" alt="Share Trade Academy">
       </a>
 
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
       <nav>
         <ul class="nav-links" id="navLinks">
           <li><a href="#home">Home</a></li>
@@ -37,21 +43,16 @@
         </ul>
       </nav>
 
-      <button class="hamburger" id="hamburger" aria-label="menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-    </div>
 
-
-    <!-- Ticker Tape -->
-    <div style="height: 60px; overflow: hidden; position: relative;">
-      <tv-ticker-tape
-        symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD"
-        item-size="compact" show-hover></tv-ticker-tape>
     </div>
   </header>
+  <!-- Ticker Tape -->
+  <div style="height: 60px; overflow: hidden; position: relative;">
+    <tv-ticker-tape
+      symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD"
+      item-size="compact" show-hover></tv-ticker-tape>
+  </div>
+  <div class="overlay" id="overlay"></div>
 
   <!-- HERO SECTION -->
   <section class="hero">
@@ -185,7 +186,7 @@
     </div>
   </section>
 
-    <!-- Mentor Section -->
+  <!-- Mentor Section -->
   <section class="mentor" id="mentor">
     <div class="container">
 
@@ -198,7 +199,8 @@
 
         <!-- LEFT: IMAGE -->
         <div class="mentor-img">
-          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Lead Mentor">
+          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Lead Mentor">
         </div>
 
         <!-- RIGHT: CONTENT -->
@@ -512,13 +514,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Ticker Tape -->
-  <div style="height: 60px; overflow: hidden; position: relative;">
-    <tv-ticker-tape
-      symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD"
-      item-size="compact" show-hover></tv-ticker-tape>
-  </div>
 
   <!-- FOOTER -->
   <footer class="footer">

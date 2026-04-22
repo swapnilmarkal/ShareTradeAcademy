@@ -14,20 +14,31 @@ window.addEventListener('scroll', function () {
 /* =========================
    MOBILE NAV
 ========================= */
-const burger = document.getElementById('hamburger');
-const nav = document.getElementById('navLinks');
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+const overlay = document.getElementById("overlay");
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('active');
-  nav.classList.toggle('active');
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active");
+  overlay.classList.toggle("active");
+  document.body.classList.toggle("no-scroll");
 });
 
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('active');
-    burger.classList.remove('active');
-  });
+/* Close when clicking overlay */
+overlay.addEventListener("click", closeMenu);
+
+/* Close when clicking any nav link */
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", closeMenu);
 });
+
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navLinks.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.classList.remove("no-scroll");
+}
 
 
 /* =========================
