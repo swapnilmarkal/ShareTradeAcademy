@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Share Trade Academy - Professional stock trading education." />
+  <title>Share Trade Academy | Learn Stock Market Trading</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scripts -->
+  <script src="js/script.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header id="home">
+    <div class="container nav">
+      <a href="#" class="logo">
+        <img src="images/logo.png" class="logo-desktop" alt="Share Trade Academy">
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#mentor">About Mentor</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact" class="btn">Enroll Now</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+
+    <!-- Ticker Tape -->
+    <div style="height: 60px; overflow: hidden; position: relative;">
+      <tv-ticker-tape
+        symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD"
+        item-size="compact" show-hover></tv-ticker-tape>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Master Stock Trading With Professional Market Mentors</h1>
+        <p>
+          Learn technical analysis, price action, options trading, risk management,
+          and disciplined strategies through structured market education.
+        </p>
+        <a href="#programs" class="btn">Explore Courses</a>
+      </div>
+
+      <div class="hero-card">
+        <h3>What You'll Learn</h3>
+        <ul>
+          <li>✔ Intraday & Swing Trading</li>
+          <li>✔ Technical Chart Analysis</li>
+          <li>✔ Futures & Options</li>
+          <li>✔ Risk Management Systems</li>
+          <li>✔ Live Market Mentoring</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <!-- <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Our Lead Mentor</h2>
+      <p class="section-sub">
+        Our lead tutor has over 10 years of experience in equities, derivatives, and live market mentoring. He has
+        invested significant time and resources in learning from experienced market professionals and refining practical
+        trading approaches. Alongside active market experience, he is deeply passionate about teaching and focuses on
+        simplifying complex concepts for students. He also believes in mentoring beyond trading by sharing discipline,
+        mindset, and life lessons that help students build long-term consistency.
+      </p>
+
+      <div class="about-grid">
+        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Trading Mentor">
+
+        <div class="card">
+          <h3>Professional Trading Background</h3>
+          <p>
+            Demo content: Former proprietary trader, educator, and market strategist focused on practical execution and
+            disciplined trading systems.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <h4>100+</h4>
+              <p>Students</p>
+            </div>
+            <div class="stat">
+              <h4>10+</h4>
+              <p>Years</p>
+            </div>
+            <div class="stat">
+              <h4>300+</h4>
+              <p>Live Sessions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- PROGRAMS SECTION -->
+  <section id="programs" class="courses">
+    <div class="container">
+      <h2 class="section-title">Trading Programs & Market Mastery Tracks</h2>
+      <p class="section-sub">Structured programs designed to take you from beginner to confident trader.</p>
+
+      <div class="course-grid">
+
+        <!-- CARD 1 -->
+        <div class="course-card">
+          <div class="course-img">
+            <img
+              src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800">
+          </div>
+          <div class="course-content">
+            <h3>Basics of Stock Market</h3>
+            <ul>
+              <li>✔ Market Structure & Terminology</li>
+              <li>✔ Candlestick Patterns</li>
+              <li>✔ Support & Resistance</li>
+              <li>✔ Chart Reading Skills</li>
+              <li>✔ Risk Management Basics</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="course-card">
+          <div class="course-img">
+            <img
+              src="https://images.pexels.com/photos/7567563/pexels-photo-7567563.jpeg?auto=compress&cs=tinysrgb&w=800">
+          </div>
+          <div class="course-content">
+            <h3>Futures & Options</h3>
+            <ul>
+              <li>✔ Options Chain Understanding</li>
+              <li>✔ Greeks Simplified</li>
+              <li>✔ Hedging Strategies</li>
+              <li>✔ Intraday F&O Setups</li>
+              <li>✔ Expiry Day Trading</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="course-card">
+          <div class="course-img">
+            <img
+              src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800">
+          </div>
+          <div class="course-content">
+            <h3>Mentorship Program</h3>
+            <ul>
+              <li>✔ Live Market Sessions</li>
+              <li>✔ Trade Reviews & Feedback</li>
+              <li>✔ Personal Strategy Building</li>
+              <li>✔ Psychology & Discipline</li>
+              <li>✔ Direct Mentor Support</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- Mentor Section -->
+  <section class="mentor" id="mentor">
+    <div class="container">
+
+      <h2 class="section-title">Meet Your Lead Mentor</h2>
+      <p class="section-sub">
+        Learn from structured guidance built on real market experience and disciplined trading principles.
+      </p>
+
+      <div class="mentor-card">
+
+        <!-- LEFT: IMAGE -->
+        <div class="mentor-img">
+          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Lead Mentor">
+        </div>
+
+        <!-- RIGHT: CONTENT -->
+        <div class="mentor-content">
+
+          <h3>Senior Market Mentor</h3>
+          <p class="role">Equities • Derivatives • Live Market Education</p>
+
+          <p class="desc">
+            Our lead mentor has over <strong>10+ years of experience</strong> in equities, derivatives, and live market
+            mentoring.
+            He has invested significant time in learning from experienced traders and refining practical, rule-based
+            trading approaches.
+          </p>
+
+          <p class="desc">
+            Passionate about teaching, he focuses on simplifying complex market concepts and helping students build
+            disciplined, consistent trading habits through structured learning.
+          </p>
+
+          <p class="desc">
+            Beyond trading, his mentorship approach also emphasizes mindset development, discipline, and long-term
+            thinking
+            required for sustainable growth in financial markets.
+          </p>
+
+          <!-- STATS -->
+          <div class="mentor-stats">
+            <div>
+              <h4>10+ Years</h4>
+              <span>Market Experience</span>
+            </div>
+
+            <div>
+              <h4>1000+</h4>
+              <span>Students Mentored</span>
+            </div>
+
+            <div>
+              <h4>Live</h4>
+              <span>Market Sessions</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+
+        <div class="faq-item">
+          <div class="faq-question">Will I make good money after taking this course?<span>+</span></div>
+          <div class="faq-answer">
+            <p>This course teaches you practical trading skills, strategies, and risk management. However, trading
+              outcomes depend on your discipline, market conditions, and practice. We focus on helping you become a
+              consistent and informed trader rather than promising fixed income.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do I need any prior knowledge of the stock market?<span>+</span></div>
+          <div class="faq-answer">
+            <p>No. The course is designed for complete beginners. We start from the basics like market structure,
+              candlestick reading, and gradually move to advanced trading strategies.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How much capital do I need to start trading?<span>+</span></div>
+          <div class="faq-answer">
+            <p>You can start with any amount you are comfortable with. However, we recommend starting small while you
+              learn and focusing more on skill development rather than high capital exposure.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is trading risky?<span>+</span></div>
+          <div class="faq-answer">
+            <p>Yes. Trading involves financial risk. That's why our program strongly emphasizes risk management, capital
+              protection, and disciplined trading strategies.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How long does it take to learn trading?<span>+</span></div>
+          <div class="faq-answer">
+            <p>The learning process varies from person to person. Most students begin understanding core concepts within
+              a few weeks, but becoming consistently profitable requires practice and experience in live markets.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Will I get personal mentorship?<span>+</span></div>
+          <div class="faq-answer">
+            <p>Yes, mentorship is part of our advanced programs where students receive guidance, trade reviews, and
+              feedback from experienced traders.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I trade part-time while working or studying?<span>+</span></div>
+          <div class="faq-answer">
+            <p>Yes, our program is designed to be flexible, allowing you to trade part-time while managing other
+              commitments.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do you guarantee profits?<span>+</span></div>
+          <div class="faq-answer">
+            <p>No. We do not guarantee profits. The stock market is unpredictable, and success depends on skill,
+              discipline, and risk management. Our goal is to build your understanding and trading capability.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Will you provide live market guidance?<span>+</span></div>
+          <div class="faq-answer">
+            <p>Yes. We conduct live market sessions for educational purposes where we explain how markets move in real
+              time, how to analyze charts, and how professional traders approach decision-making. These sessions are
+              designed to help students learn observation, analysis, and trading discipline—not to provide any buy/sell
+              recommendations or assured trade calls.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="testimonials">
+    <div class="testimonials-inner">
+      <h2 class="section-title">What Our Students Say</h2>
+      <p class="section-sub">Genuine feedback from students who have completed our trading programs and mentorship
+        sessions.</p>
+
+      <div class="testimonial-slider" id="testimonialSlider">
+
+        <div class="testimonial-card">
+          <p>"Share Trade Academy is an excellent institute for learning the stock market. They explain concepts in a
+            very simple and practical way. Anil Sir and Nitin Sir have deep market knowledge and always share valuable
+            real-time insights, which really helps in understanding how the market actually works. Highly recommended
+            for anyone serious about learning trading and investing."</p>
+          <div class="user">
+            <div class="user-icon female">
+              <i data-lucide="user-round"></i>
+            </div>
+            <div>
+              <strong>Deepali Gadkari</strong>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-card">
+          <p>"Amazing Teacher Anil sir dosent only teach but guides you into an unforgetabble experince he makes trading
+            and stock market easy to understand even if you come with the least amount of education , Anil sir and his
+            Associates will make you laugh and make the entire experience comfortable enough to learn and grow until you
+            become an independent trader or invester"</p>
+          <div class="user">
+            <div class="user-icon male">
+              <i data-lucide="user-round"></i>
+            </div>
+            <div>
+              <strong>Serp Hos</strong>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-card">
+          <p>"Very nice education provided by Mr Anil Patel
+            He is very experienced in stock market.
+            Teaching is very simple and effective"</p>
+          <div class="user">
+            <div class="user-icon male">
+              <i data-lucide="user-round"></i>
+            </div>
+            <div>
+              <strong>Naresh OMakwana</strong>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-card">
+          <p>"I thoroughly enjoyed the class! The interactive teaching style. The real-life applications and group
+            discussions really enhanced my learning experience. Overall, it was an excellent course that I would highly
+            recommend!"</p>
+          <div class="user">
+            <div class="user-icon male">
+              <i data-lucide="user-round"></i>
+            </div>
+            <div>
+              <strong>Ashok Jayna</strong>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-card">
+          <p>"I thoroughly enjoyed the class! The interactive teaching style kept me engaged, and the use of practical
+            examples made complex concepts easy to understand. The real-life applications and group discussions really
+            enhanced my learning experience. Overall, it was an excellent course that I would highly recommend!"</p>
+          <div class="user">
+            <div class="user-icon male">
+              <i data-lucide="user-round"></i>
+            </div>
+            <div>
+              <strong>Nikhil Sawatkar</strong>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-card">
+          <p>"Good environment to learn about the stock market. Dedicated and enthusiastic Faculty to teach about stock
+            market. Unleashing the knowledge to the last level later by layer. Worth learning"</p>
+          <div class="user">
+            <div class="user-icon male">
+              <i data-lucide="user-round"></i>
+            </div>
+            <div>
+              <strong>Kuldeep Kewlani</strong>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-card">
+          <p>"Course material was comprehensive, covering both basics and advanced concepts. I've gained valuable
+            insights and confidence in trading. Highly recommend this academy to anyone looking to learn share trading!"
+          </p>
+          <div class="user">
+            <div class="user-icon male">
+              <i data-lucide="user-round"></i>
+            </div>
+            <div>
+              <strong>Prathamesh Dubey</strong>
+              <div class="stars">★★★★</div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <div class="review-cta">
+        <a href="https://www.google.com/maps/place/ShareTrade+Academy/@19.1869048,72.8485975,17z/data=!4m16!1m9!3m8!1s0x3be7a95c8a8fd55b:0x7db5413bfd61e0c4!2sShareTrade+Academy!8m2!3d19.1869048!4d72.8511724!9m1!1b1!16s%2Fg%2F11s1cndqmd!3m5!1s0x3be7a95c8a8fd55b:0x7db5413bfd61e0c4!8m2!3d19.1869048!4d72.8511724!16s%2Fg%2F11s1cndqmd?entry=ttu&g_ep=EgoyMDI2MDQxOS4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" class="btn">
+          View All Reviews on Google
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+
+      <div class="contact-grid">
+
+        <form id="contactForm">
+
+          <input type="hidden" name="access_key" value="b0bd96b2-123f-4e13-8304-7a21f6f94b40">
+
+          <!-- Honeypot -->
+          <input type="checkbox" name="botcheck" style="display:none;">
+
+          <div class="input-group">
+            <input type="text" name="name" placeholder="Full Name" required>
+          </div>
+
+          <div class="input-group">
+            <input type="email" name="email" placeholder="Email" required>
+          </div>
+
+          <div class="input-group">
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+          </div>
+
+          <div class="input-group">
+            <textarea name="message" placeholder="Tell us about your interest" required></textarea>
+          </div>
+
+          <button class="btn submit-btn" type="submit">Send Inquiry</button>
+
+          <p id="form-status" style="margin-top:10px;"></p>
+
+        </form>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3768.1899351823345!2d72.8485975!3d19.1869048!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a95c8a8fd55b%3A0x7db5413bfd61e0c4!2sShareTrade%20Academy!5e0!3m2!1sen!2sin!4v1776856030874!5m2!1sen!2sin"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Ticker Tape -->
+  <div style="height: 60px; overflow: hidden; position: relative;">
+    <tv-ticker-tape
+      symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD"
+      item-size="compact" show-hover></tv-ticker-tape>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <h3 class="footer-logo">Share<span class="green-text">Trade</span> Academy</h3>
+          <p class="footer-desc">
+            Professional stock trading education and mentorship focused on technical analysis, disciplined trading, and
+            real market application.
+          </p>
+
+          <div class="socials">
+            <a href="https://www.instagram.com/sharetradeacademy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank" class="social-btn" title="Instagram">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.2A4.8 4.8 0 1 0 12 17a4.8 4.8 0 0 0 0-9.6zm0 2A2.8 2.8 0 1 1 12 15a2.8 2.8 0 0 1 0-5.6zm4.8-2.3a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z" />
+              </svg>
+            </a>
+
+            <a href="https://t.me/sharetradeacademy" target="_blank" class="social-btn" title="Telegram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path
+                  d="M21.8 4.1L3.3 9.3c-1.4.6-1.3 2.6.1 3.1l4.4 1.4 1.7 5.3c.4 1.3 2.1 1.6 3 .6l2.7-2.9 4.4 3.2c1 .7 2.4.1 2.6-1.1l2.6-14.8z" />
+                <path d="M9.2 13.2l8.9-5.6-7.1 6.7-.3 3.2-1.5-4.3z" />
+              </svg>
+            </a>
+
+            <a href="tel:+918828597226" class="social-btn" title="Phone">
+              <i data-lucide="phone"></i>
+            </a>
+
+            <a href="mailto:info@sharetradeacademy.in" class="social-btn" title="Email">
+              <i data-lucide="mail"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#about">About Mentor</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-contact">
+            <p><i data-lucide="mail"></i> info@sharetradeacademy.in</p>
+            <p><i data-lucide="phone"></i> +91-8828597226</p>
+            <p><i data-lucide="map-pin"></i> 502/Shukra Building,<br> Diamond Market,<br> Daftary Road,<br> Primal
+              Nagar,<br> Malad East,<br> Mumbai,<br>Maharashtra 400097</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Share Trade Academy. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ticker Tape Script -->
+  <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
+</body>
+
+</html>
