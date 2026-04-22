@@ -94,4 +94,4 @@ Optimized for:
 ## 🔧 Setup Instructions
 
 1. Clone the repository:
-git clone https://github.com/your-username/share-trade-academy.git
+git clone https://github.com/swapnilmarkal/share-trade-academy.git
