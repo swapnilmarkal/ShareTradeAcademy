@@ -40,16 +40,16 @@ The goal of this project is to create a **high-conversion educational landing pa
 
 
 ## 📂 Project Structure
-project-folder/
-│
-├── index.html
-├── css/
-│ └── style.css
-├── js/
-│ └── script.js
-├── images/
-│ └── logo.png (optional)
-└── README.md
+project-folder/  
+│  
+├── index.html  
+├── css/  
+│ └── style.css  
+├── js/  
+│ └── script.js  
+├── images/  
+│ └── logo.png (optional)  
+└── README.md  
 
 
 
