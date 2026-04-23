@@ -176,7 +176,7 @@ form.addEventListener("submit", function(e) {
       fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: new URLSearchParams({
-          access_key: "YOUR_WEB3FORM_KEY",
+          access_key: "", // WEB3FORMS_ACCESS_KEY
           name,
           email,
           phone,
