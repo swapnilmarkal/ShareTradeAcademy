@@ -451,31 +451,36 @@ header .logo img {
 ========================================================= */
 
 .courses {
-  background: var(--light);
+  background: #050f1e;
+  color: #fff;
 }
 
+/* GRID */
 .course-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 
+/* CARD */
 .course-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.04);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 200, 150, 0.15);
+  backdrop-filter: blur(10px);
   transition: all 0.35s ease;
-  border: 1px solid rgba(0, 200, 150, 0.1);
 }
 
+/* HOVER */
 .course-card:hover {
-  transform: translateY(-10px) scale(1.01);
+  transform: translateY(-10px);
   box-shadow:
     0 0 25px rgba(0, 200, 150, 0.25),
-    0 10px 40px rgba(0, 0, 0, 0.2);
+    0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* IMAGE */
 .course-img {
   height: 180px;
   overflow: hidden;
@@ -486,21 +491,25 @@ header .logo img {
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
+  opacity: 0.9;
 }
 
 .course-card:hover .course-img img {
   transform: scale(1.1);
+  opacity: 1;
 }
 
+/* CONTENT */
 .course-content {
   padding: 1.5rem;
 }
 
 .course-content h3 {
   margin-bottom: 1rem;
-  color: var(--primary);
+  color: #fff;
 }
 
+/* LIST */
 .course-content ul {
   padding-left: 0;
 }
@@ -508,7 +517,7 @@ header .logo img {
 .course-content li {
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
-  color: var(--muted);
+  color: rgba(255,255,255,0.75);
 }
 
 /* =========================
