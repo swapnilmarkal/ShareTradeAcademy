@@ -126,6 +126,7 @@ lucide.createIcons();
 
 const modal = document.getElementById("enrollModal");
 const openBtn = document.getElementById("openEnroll");
+const stickOpenBtn = document.getElementById("sticky-enroll");
 const closeBtn = document.getElementById("closeEnroll");
 const form = document.getElementById("enrollForm");
 
@@ -134,9 +135,16 @@ openBtn.addEventListener("click", () => {
   modal.classList.add("active");
 });
 
+// OPEN Stiky Button
+stickOpenBtn.addEventListener("click", () => {
+  modal.classList.add("active");
+  document.body.classList.add("no-scroll"); // Prevent background scroll when modal is open
+});
+
 // CLOSE
 closeBtn.addEventListener("click", () => {
   modal.classList.remove("active");
+  document.body.classList.remove("no-scroll"); // Allow background scroll when modal is closed
 });
 
 // SUBMIT → PAYMENT
