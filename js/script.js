@@ -138,13 +138,13 @@ openBtn.addEventListener("click", () => {
 // OPEN Stiky Button
 stickOpenBtn.addEventListener("click", () => {
   modal.classList.add("active");
-  document.body.classList.add("no-scroll"); // Prevent background scroll when modal is open
+  document.body.classList.add("no-scroll"); 
 });
 
 // CLOSE
 closeBtn.addEventListener("click", () => {
   modal.classList.remove("active");
-  document.body.classList.remove("no-scroll"); // Allow background scroll when modal is closed
+  document.body.classList.remove("no-scroll");
 });
 
 // SUBMIT → PAYMENT
