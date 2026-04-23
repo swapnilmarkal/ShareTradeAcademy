@@ -228,6 +228,21 @@ header .logo img {
   width: 100%;
 }
 
+/* On Scroll Nav Link Effect */
+.nav-links a.active {
+  color: var(--accent);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.enroll-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
