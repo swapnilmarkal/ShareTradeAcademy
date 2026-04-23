@@ -119,3 +119,80 @@ document.addEventListener("DOMContentLoaded", function () {
    ICON INIT
 ========================= */
 lucide.createIcons();
+
+/* =========================
+   Enrollment Modal & Razorpay Integration
+========================= */
+
+const modal = document.getElementById("enrollModal");
+const openBtn = document.getElementById("openEnroll");
+const closeBtn = document.getElementById("closeEnroll");
+const form = document.getElementById("enrollForm");
+
+// OPEN
+openBtn.addEventListener("click", () => {
+  modal.classList.add("active");
+});
+
+// CLOSE
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+// SUBMIT → PAYMENT
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  const name = data.get("name");
+  const email = data.get("email");
+  const phone = data.get("phone");
+  const course = data.get("course");
+
+  // PRICE LOGIC
+  let amount = 5000;
+
+  if (course === "F&O") amount = 8000;
+  if (course === "Mentorship") amount = 15000;
+
+  const options = {
+    key: "YOUR_RAZORPAY_KEY",
+    amount: amount * 100,
+    currency: "INR",
+    name: "ShareTrade Academy",
+    description: course + " Enrollment",
+
+    handler: function (response) {
+      // SEND DATA TO EMAIL / GOOGLE SHEET
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new URLSearchParams({
+          access_key: "YOUR_WEB3FORM_KEY",
+          name,
+          email,
+          phone,
+          course,
+          payment_id: response.razorpay_payment_id
+        })
+      });
+
+      alert("Payment Successful! We will contact you.");
+      modal.classList.remove("active");
+      form.reset();
+    },
+
+    prefill: {
+      name,
+      email,
+      contact: phone
+    },
+
+    theme: {
+      color: "#00c896"
+    }
+  };
+
+  const rzp = new Razorpay(options);
+  rzp.open();
+});

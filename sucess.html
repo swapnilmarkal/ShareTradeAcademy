@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Success</title>
+</head>
+<body style="font-family: Arial; text-align:center; padding:50px;">
+
+  <h1>✅ Payment Successful!</h1>
+  <p id="msg"></p>
+
+  <p>We will contact you shortly with class details.</p>
+
+  <a href="https://wa.me/918828597226" target="_blank">
+    Contact on WhatsApp
+  </a>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+
+    document.getElementById("msg").innerText =
+      name ? `Thank you, ${name}!` : "";
+  </script>
+
+</body>
+</html>
