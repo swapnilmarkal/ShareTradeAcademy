@@ -53,11 +53,22 @@
 
       <nav>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#programs">Courses</a></li>
-          <li><a href="#books">Books</a></li>
-          <li><a href="#results">Testimonials</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#" class="btn enroll-btn" id="openEnroll">Enroll Now</a></li>
+          <li><a href="index.html">Home</a></li>
+
+          <li class="has-dropdown">
+            <a href="#programs">Courses</a>
+
+            <div class="dropdown">
+              <a href="course.html?course=advance">Advanced Course</a>
+              <a href="course.html?course=intraday">Intraday Course</a>
+              <a href="course.html?course=fno">F&O Course</a>
+            </div>
+          </li>
+
+          <li><a href="index.html#books">Books</a></li>
+          <li><a href="index.html#results">Testimonials</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="#" class="btn enroll-btn">Enroll Now</a></li>
         </ul>
       </nav>
 
@@ -180,57 +191,82 @@
       </p>
       <div class="course-grid">
 
-        <!-- CARD 1 -->
-        <div class="course-card">
+        <!-- ADVANCED -->
+        <div class="course-card premium">
           <div class="course-img">
             <img
-              src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800">
+              src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Intraday Trading Charts">
+
+            <span class="course-tag">Advanced</span>
           </div>
+
           <div class="course-content">
-            <h3>Basics of Stock Market</h3>
-            <ul>
-              <li>✔ Market Structure & Terminology</li>
-              <li>✔ Candlestick Patterns</li>
-              <li>✔ Support & Resistance</li>
-              <li>✔ Chart Reading Skills</li>
-              <li>✔ Risk Management Basics</li>
+            <h3>Advanced Share Market</h3>
+            <p class="course-sub">Master analysis, strategy & consistent trading</p>
+
+            <ul class="course-points">
+              <li>✔ Technical + Fundamental Analysis</li>
+              <li>✔ Real Trading Strategies</li>
+              <li>✔ Risk & Portfolio Management</li>
+              <li>✔ Live Market Thinking</li>
             </ul>
+
+            <div class="course-footer">
+              <span class="price">₹14,000</span>
+              <a href="course.html?course=advance" class="btn small">View Details</a>
+            </div>
           </div>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="course-card">
+        <!-- INTRADAY -->
+        <div class="course-card premium">
           <div class="course-img">
-            <img
-              src="https://images.pexels.com/photos/7567563/pexels-photo-7567563.jpeg?auto=compress&cs=tinysrgb&w=800">
+            <img src="https://images.pexels.com/photos/210990/pexels-photo-210990.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Active Trading Setup">
+            <span class="course-tag">Intraday</span>
           </div>
+
+          <div class="course-content">
+            <h3>Intraday Trading</h3>
+            <p class="course-sub">Fast decision-making & same-day trading skills</p>
+
+            <ul class="course-points">
+              <li>✔ Indicators & Price Action</li>
+              <li>✔ Stock Selection Strategy</li>
+              <li>✔ High Probability Setups</li>
+              <li>✔ Risk & Discipline Rules</li>
+            </ul>
+
+            <div class="course-footer">
+              <span class="price">₹5,000</span>
+              <a href="course.html?course=intraday" class="btn small">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- F&O -->
+        <div class="course-card premium">
+          <div class="course-img">
+            <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800">
+            <span class="course-tag">F&O</span>
+          </div>
+
           <div class="course-content">
             <h3>Futures & Options</h3>
-            <ul>
-              <li>✔ Options Chain Understanding</li>
-              <li>✔ Greeks Simplified</li>
-              <li>✔ Hedging Strategies</li>
-              <li>✔ Intraday F&O Setups</li>
-              <li>✔ Expiry Day Trading</li>
-            </ul>
-          </div>
-        </div>
+            <p class="course-sub">Advanced derivatives & options strategies</p>
 
-        <!-- CARD 3 -->
-        <div class="course-card">
-          <div class="course-img">
-            <img
-              src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800">
-          </div>
-          <div class="course-content">
-            <h3>Mentorship Program</h3>
-            <ul>
-              <li>✔ Live Market Sessions</li>
-              <li>✔ Trade Reviews & Feedback</li>
-              <li>✔ Personal Strategy Building</li>
-              <li>✔ Psychology & Discipline</li>
-              <li>✔ Direct Mentor Support</li>
+            <ul class="course-points">
+              <li>✔ Options Greeks Simplified</li>
+              <li>✔ Nifty & BankNifty Strategies</li>
+              <li>✔ Open Interest Analysis</li>
+              <li>✔ Risk Hedging Techniques</li>
             </ul>
+
+            <div class="course-footer">
+              <span class="price">₹8,000</span>
+              <a href="course.html?course=fno" class="btn small">View Details</a>
+            </div>
           </div>
         </div>
 
@@ -619,7 +655,9 @@
         <div>
           <h4 class="footer-title">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="#programs">Courses</a></li>
+            <li><a href="course.html?course=advance">Advanced Course</a></li>
+            <li><a href="course.html?course=intraday">Intraday Course</a></li>
+            <li><a href="course.html?course=fno">F&O Course</a></li>
             <li><a href="#books">Books</a></li>
             <li><a href="#results">Testimonials</a></li>
             <li><a href="#contact">Contact Us</a></li>

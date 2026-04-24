@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title id="pageTitle">Course</title>
+  <meta name="description" id="pageDesc" />
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/course.css">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="course-page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" class="logo-desktop" alt="Share Trade Academy">
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+
+          <li class="has-dropdown">
+            <a href="#">Courses</a>
+
+            <div class="dropdown">
+              <a href="course.html?course=advance">Advanced Course</a>
+              <a href="course.html?course=intraday">Intraday Course</a>
+              <a href="course.html?course=fno">F&O Course</a>
+            </div>
+          </li>
+
+          <li><a href="index.html#books">Books</a></li>
+          <li><a href="index.html#results">Testimonials</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="#" class="btn enroll-btn">Enroll Now</a></li>
+        </ul>
+      </nav>
+
+
+    </div>
+  </header>
+
+  <div class="empty-space"></div>
+
+  <!-- HERO -->
+  <section class="course-hero" id="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-left">
+        <h1 id="courseTitle"></h1>
+        <p class="hero-sub" id="courseSubtitle"></p>
+
+        <div class="hero-meta" id="heroMeta"></div>
+
+        <div class="hero-actions">
+          <a href="#" class="btn primary">Start Learning</a>
+          <!-- <a href="#modules" class="btn outline">View Curriculum</a> -->
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3 id="sidebarTitle"></h3>
+        <p class="price" id="price"></p>
+        <ul id="quickFeatures"></ul>
+        <a href="#" class="btn full">Enroll Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <section class="course-body">
+
+    <div class="course-main">
+
+      <!-- COURSE BREAKDOWN -->
+      <section class="course-block">
+        <div class="container">
+          <h2 class="section-title">Complete Course Breakdown</h2>
+          <p class="section-sub">
+            Explore each topic in detail and understand exactly what you’ll learn.
+          </p>
+
+          <!-- DYNAMIC ACCORDION -->
+          <div class="accordion" id="courseAccordion"></div>
+        </div>
+      </section>
+
+      <!-- BENEFITS AND FEATURES -->
+      <section class="course-block dark">
+        <div class="container">
+          <div class="dual-section">
+
+            <!-- BENEFITS -->
+            <div>
+              <h2 class="section-title">What You’ll Achieve</h2>
+              <p class="section-sub">
+                Clear outcomes you can expect after completing this course.
+              </p>
+
+              <div class="benefit-grid" id="benefits"></div>
+            </div>
+
+            <!-- FEATURES -->
+            <div>
+              <h2 class="section-title">What You Get</h2>
+              <p class="section-sub">
+                Everything included to help you succeed in real markets.
+              </p>
+
+              <div class="feature-grid" id="features"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- AUDIENCE -->
+      <section class="course-block">
+        <div class="container">
+
+          <h2 class="section-title">Is This Course Right For You?</h2>
+          <p class="section-sub">
+            Understand if this program fits your goals and what outcomes you can expect.
+          </p>
+
+          <div class="audience-grid">
+
+            <!-- WHO -->
+            <div class="audience-card">
+              <h3>Who Can Join</h3>
+              <ul id="who"></ul>
+            </div>
+
+            <!-- OUTCOME -->
+            <div class="audience-card highlight">
+              <h3>After Completing</h3>
+              <ul id="outcomes"></ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="course-cta">
+        <div class="container center">
+
+          <h2 class="cta-title">
+            Start Your Trading Journey Today
+          </h2>
+
+          <p class="cta-sub">
+            Learn proven strategies, avoid costly mistakes, and build a system that works in real markets.
+          </p>
+
+          <div class="cta-box">
+            <span class="cta-price" id="ctaPrice"></span>
+            <a href="#" class="btn primary large">Enroll Now</a>
+          </div>
+
+          <p class="cta-note">
+            Limited seats • Personalized guidance • Real market learning
+          </p>
+
+        </div>
+      </section>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <h3 class="footer-logo">Share<span class="green-text">Trade</span> Academy</h3>
+          <p class="footer-desc">
+            Professional stock trading education and mentorship focused on technical analysis, disciplined trading, and
+            real market application.
+          </p>
+
+          <div class="socials">
+            <a href="https://www.instagram.com/sharetradeacademy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank" class="social-btn" title="Instagram">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.2A4.8 4.8 0 1 0 12 17a4.8 4.8 0 0 0 0-9.6zm0 2A2.8 2.8 0 1 1 12 15a2.8 2.8 0 0 1 0-5.6zm4.8-2.3a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z" />
+              </svg>
+            </a>
+
+            <a href="https://t.me/sharetradeacademy" target="_blank" class="social-btn" title="Telegram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path
+                  d="M21.8 4.1L3.3 9.3c-1.4.6-1.3 2.6.1 3.1l4.4 1.4 1.7 5.3c.4 1.3 2.1 1.6 3 .6l2.7-2.9 4.4 3.2c1 .7 2.4.1 2.6-1.1l2.6-14.8z" />
+                <path d="M9.2 13.2l8.9-5.6-7.1 6.7-.3 3.2-1.5-4.3z" />
+              </svg>
+            </a>
+
+            <a href="tel:+918828597226" class="social-btn" title="Phone">
+              <i data-lucide="phone"></i>
+            </a>
+
+            <a href="mailto:info@sharetradeacademy.in" class="social-btn" title="Email">
+              <i data-lucide="mail"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="course.html?course=advance">Advanced Course</a></li>
+            <li><a href="course.html?course=intraday">Intraday Course</a></li>
+            <li><a href="course.html?course=fno">F&O Course</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#results">Testimonials</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-contact">
+            <p><i data-lucide="mail"></i> info@sharetradeacademy.in</p>
+            <p><i data-lucide="phone"></i> +91-8828597226</p>
+            <p><i data-lucide="map-pin"></i> 502/Shukra Building,<br> Diamond Market,<br> Daftary Road,<br> Primal
+              Nagar,<br> Malad East,<br> Mumbai,<br>Maharashtra 400097</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Share Trade Academy. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/courses.js"></script>
+  <script src="js/course-loader.js"></script>
+  <script>lucide.createIcons();</script>
+
+</body>
+
+</html>

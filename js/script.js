@@ -131,9 +131,9 @@ const closeBtn = document.getElementById("closeEnroll");
 const form = document.getElementById("enrollForm");
 
 // OPEN
-openBtn.addEventListener("click", () => {
-  modal.classList.add("active");
-});
+// openBtn.addEventListener("click", () => {
+//   modal.classList.add("active");
+// });
 
 // OPEN Stiky Button
 stickOpenBtn.addEventListener("click", () => {
@@ -216,17 +216,27 @@ const navLinksItems = document.querySelectorAll(".nav-links a:not(.enroll-btn)")
 window.addEventListener("scroll", () => {
   let current = "";
 
+  const headerOffset = 120;
+
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute("id");
+    const sectionTop = section.offsetTop - headerOffset;
+
+    if (section.id && window.scrollY >= sectionTop) {
+      current = section.id;
     }
   });
 
   navLinksItems.forEach(link => {
     link.classList.remove("active");
 
-    if (link.getAttribute("href") === "#" + current) {
+    const href = link.getAttribute("href");
+
+    // ignore invalid links
+    if (!href || href === "#") return;
+
+    const linkHash = href.split("#")[1];
+
+    if (linkHash === current) {
       link.classList.add("active");
     }
   });
