@@ -321,6 +321,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     bindDemoForm();
   });
+  document.getElementById("sticky-enroll").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    openModal({
+      title: "Free Demo Session",
+
+      body: demoFormTemplate,
+
+      footer: ``
+    });
+
+    bindDemoForm();
+  });
 
 });
 
