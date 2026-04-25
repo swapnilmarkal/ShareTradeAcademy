@@ -165,7 +165,7 @@ function contactFormTemplate() {
   return `
     <form id="contactForm">
 
-      <input type="hidden" name="access_key" value="2252d2f0-0055-4592-a37e-fe796f25efd6">
+      <input type="hidden" name="access_key" value="370af2a5-93ab-440b-8050-3f10f1fc76a7">
       <input type="checkbox" name="botcheck" style="display:none;">
 
       <div class="input-group">
@@ -199,7 +199,7 @@ function contactFormTemplate() {
 const demoFormTemplate = `
 <form id="demoForm">
 
-  <input type="hidden" name="access_key" value="2252d2f0-0055-4592-a37e-fe796f25efd6">
+  <input type="hidden" name="access_key" value="370af2a5-93ab-440b-8050-3f10f1fc76a7">
   <input type="checkbox" name="botcheck" style="display:none;">
 
   <div class="input-group">
