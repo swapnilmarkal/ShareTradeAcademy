@@ -1,5 +1,5 @@
 /* =========================================
-   RESET GLOBAL SECTION SPACING (COURSE PAGE ONLY)
+   RESET GLOBAL SECTION SPACING
 ========================================= */
 
 .course-page section {
@@ -19,7 +19,7 @@
 }
 
 .course-main {
-  gap: 40px; /* controls spacing between sections */
+  gap: 40px;
 }
 
 

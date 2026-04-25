@@ -1,9 +1,29 @@
+/* =========================
+    COURSE LOADER
+========================= */
+
 const params = new URLSearchParams(window.location.search);
 const courseKey = params.get("course");
 const course = COURSES[courseKey];
 
 if (!course) {
-  document.body.innerHTML = "<h2>Course not found</h2>";
+  document.body.innerHTML = `
+    <div class="not-found">
+      <div class="not-found-box">
+        <h1>Course Not Found</h1>
+        <p>The course you're looking for doesn't exist or may have been removed.</p>
+
+        <div class="not-found-actions">
+          <button class="btn" onclick="goBack()">← Go Back</button>
+          <a href="index.html#courses" class="btn secondary">View All Courses</a>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function goBack() {
+  window.history.back();
 }
 
 /* =========================
