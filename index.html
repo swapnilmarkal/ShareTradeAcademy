@@ -15,7 +15,11 @@
   <link rel="icon" href="favicon.ico">
 
   <!-- Scripts -->
+  <script src="js/form-handler.js" defer></script>
+  <script src="js/books.js" defer></script>
   <script src="js/script.js" defer></script>
+  <script src="js/modal.js" defer></script>
+  <script src="js/notification.js" defer></script>
   <script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
@@ -51,7 +55,7 @@
           <li><a href="index.html#books">Books</a></li>
           <li><a href="index.html#results">Testimonials</a></li>
           <li><a href="index.html#contact">Contact</a></li>
-          <li><a href="#" class="btn small enroll-btn">Enroll Now</a></li>
+          <li><a href="#" class="btn small enroll-btn" id="navEnrollBtn">Enroll Now</a></li>
         </ul>
       </nav>
 
@@ -260,60 +264,10 @@
         Premium trading books at prices lower than the market — designed to guide your stock market journey.
       </p>
 
-      <div class="books-grid">
+      <div id="booksGrid" class="books-grid"></div>
+      <div id="booksFooter" class="books-footer"></div>
 
-        <!-- BOOK -->
-        <div class="book-card">
-          <img src="images/books/book1.webp" alt="Trading Basics Book">
-
-          <div class="book-content">
-            <h3>The Indian Stock Market Simplified</h3>
-            <p>Beginner-friendly guide to stock market concepts.</p>
-
-            <div class="book-footer">
-              <h4 class="price">₹499</h4>
-              <button class="btn book-btn" data-price="499" data-book="The Indian Stock Market Simplified">
-                Buy Now
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- BOOK -->
-        <div class="book-card">
-          <img src="images/books/book2.webp" alt="Options Book">
-
-          <div class="book-content">
-            <h3>Trading in the Zone</h3>
-            <p>Advanced strategies for F&O trading.</p>
-
-            <div class="book-footer">
-              <h4 class="price">₹999</h4>
-              <button class="btn book-btn" data-price="999" data-book="Trading in the Zone">
-                Buy Now
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- BOOK -->
-        <div class="book-card">
-          <img src="images/books/book3.webp" alt="Options Book">
-
-          <div class="book-content">
-            <h3>Price Action Trading</h3>
-            <p>Learn real market setups and execution.</p>
-
-            <div class="book-footer">
-              <h4 class="price">₹899</h4>
-              <button class="btn book-btn" data-price="899" data-book="Price Action Trading">
-                Buy Now
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </div>
+    </div>
     </div>
   </section>
 

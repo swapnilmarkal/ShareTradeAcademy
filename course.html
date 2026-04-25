@@ -46,7 +46,7 @@
           <li><a href="index.html#books">Books</a></li>
           <li><a href="index.html#results">Testimonials</a></li>
           <li><a href="index.html#contact">Contact</a></li>
-          <li><a href="#" class="btn enroll-btn">Enroll Now</a></li>
+          <li><a href="#" class="btn enroll-btn small " data-modal='demo'>Enroll Now</a></li>
         </ul>
       </nav>
 
@@ -67,8 +67,7 @@
         <div class="hero-meta" id="heroMeta"></div>
 
         <div class="hero-actions">
-          <a href="#" class="btn primary">Start Learning</a>
-          <!-- <a href="#modules" class="btn outline">View Curriculum</a> -->
+          <a href="#" class="btn primary " data-modal='demo'>Start Learning</a>
         </div>
       </div>
 
@@ -76,7 +75,7 @@
         <h3 id="sidebarTitle"></h3>
         <p class="price" id="price"></p>
         <ul id="quickFeatures"></ul>
-        <a href="#" class="btn full">Enroll Now</a>
+        <a href="#" class="btn full " data-modal='demo'>Enroll Now</a>
       </div>
 
     </div>
@@ -171,7 +170,7 @@
 
           <div class="cta-box">
             <span class="cta-price" id="ctaPrice"></span>
-            <a href="#" class="btn primary large">Enroll Now</a>
+            <a href="#" class="btn primary large" data-modal='demo'>Enroll Now</a>
           </div>
 
           <p class="cta-note">
@@ -258,6 +257,56 @@
     </div>
   </footer>
 
+  <!-- NOTIFICATIONS -->
+  <div class="notification-modal" id="notificationModal">
+    <div class="notification-content">
+
+      <div class="notification-icon" id="notificationIcon">✓</div>
+
+      <h3 class="notification-title" id="notificationTitle">Success</h3>
+
+      <p class="notification-message" id="notificationMessage">
+        Message goes here
+      </p>
+
+      <button class="notification-btn" onclick="closeNotification()">
+        OK
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MODALS -->
+  <div class="modal" id="modal">
+
+    <div class="modal-content">
+
+      <!-- HEADER -->
+      <div class="modal-header" id="modalHeader">
+        <h3 id="modalTitle">Title</h3>
+
+        <button class="modal-close" id="modalCloseBtn">×</button>
+      </div>
+
+      <!-- BODY -->
+      <div class="modal-body" id="modalBody">
+        <!-- dynamic content goes here -->
+      </div>
+
+      <!-- FOOTER -->
+      <div class="modal-footer" id="modalFooter">
+        <!-- buttons go here -->
+      </div>
+
+    </div>
+
+  </div>
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="js/form-handler.js"></script>
+  <script src="js/notification.js"></script>
+  <script src="js/modal.js"></script>
   <script src="js/courses.js"></script>
   <script src="js/course-loader.js"></script>
   <script>lucide.createIcons();</script>

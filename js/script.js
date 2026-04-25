@@ -78,6 +78,67 @@ function closeMenu() {
 
 
 /* =========================
+   LOAD BOOKS
+========================= */
+document.addEventListener("DOMContentLoaded", () => {
+  initBooks();
+});
+
+function initBooks() {
+  const grid = document.getElementById("booksGrid");
+  const footer = document.getElementById("booksFooter");
+
+  if (!grid) return;
+
+  grid.innerHTML = "";
+  footer.innerHTML = "";
+
+  if (!BOOKS || BOOKS.length === 0) {
+    grid.innerHTML = `
+      <div class="books-empty">
+        <h3>No Books Available</h3>
+        <p>We are currently updating our library. Please check back soon.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const visibleBooks = BOOKS.slice(0, 3);
+
+  visibleBooks.forEach(book => {
+    const isUnavailable = book.status !== "available";
+
+    const card = document.createElement("div");
+    card.className = `book-card ${isUnavailable ? "out-of-stock" : ""}`;
+
+    card.innerHTML = `
+      <img src="${book.image}" alt="${book.title}">
+
+      <div class="book-content">
+        <h3>${book.title}</h3>
+        <p>${book.desc}</p>
+
+        <div class="book-footer">
+          <h4 class="price">₹${book.price}</h4>
+
+          <button class="btn book-btn" ${isUnavailable ? "disabled" : ""}>
+            ${isUnavailable ? "Coming Soon" : "Buy Now"}
+          </button>
+        </div>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+
+  if (BOOKS.length > 3) {
+    footer.innerHTML = `
+      <a href="books.html" class="btn">View More Books</a>
+    `;
+  }
+}
+
+/* =========================
    FAQ ACCORDION
 ========================= */
 const faqItems = document.querySelectorAll('.faq-item');
@@ -112,51 +173,6 @@ setInterval(() => {
   ICON INIT
 ========================= */
 lucide.createIcons();
-
-/* =========================
-  WEB3 FORMS SUBMISSION
-========================= */
-async function submitWeb3Form(form, statusEl = null, successMessage) {
-  if (statusEl) statusEl.innerText = "Sending...";
-
-  const data = new FormData(form);
-
-  try {
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: data
-    });
-
-    const result = await res.json();
-
-    if (result.success) {
-      form.reset();
-      if (statusEl) statusEl.innerText = "";
-      showNotification(
-        "success",
-        successMessage || "Message sent successfully!",
-        "We will contact you shortly."
-      );
-
-    } else {
-      if (statusEl) statusEl.innerText = "";
-      showNotification(
-        "error",
-        result.message || "Submission failed",
-        "Please try again."
-      );
-    }
-
-  } catch (err) {
-    if (statusEl) statusEl.innerText = "";
-
-    showNotification(
-        "error",
-        result.message || "Submission failed",
-        "Please try again."
-      );
-  }
-}
 
 /* =========================
 FORM TEMPLATE
@@ -256,7 +272,7 @@ function bindDemoForm() {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     submitWeb3Form(form, null, "Demo Requested.");
-    closeModal(); 
+    closeModal();
   });
 }
 
@@ -288,76 +304,30 @@ function bindContactForm() {
   });
 }
 
-
 /* =========================
-  MODAL FUNCTIONS
+  ENROLLMENT MODAL -> DEMO FORM FOR NOW
 ========================= */
-const modal = document.getElementById("modal");
-const overlay = document.getElementById("overlay");
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("navEnrollBtn").addEventListener("click", (e) => {
+    e.preventDefault();
 
-const modalTitle = document.getElementById("modalTitle");
-const modalBody = document.getElementById("modalBody");
-const modalFooter = document.getElementById("modalFooter");
-const closeBtn = document.getElementById("modalCloseBtn");
+    openModal({
+      title: "Free Demo Session",
 
-// OPEN
-function openModal({ title = "", body = "", footer = "" }) {
-  modalTitle.innerText = title;
-  modalBody.innerHTML = body;
-  modalFooter.innerHTML = footer;
+      body: demoFormTemplate,
 
-  modal.classList.add("active");
-  overlay.classList.add("active");
-  document.body.classList.add("no-scroll");
-}
+      footer: ``
+    });
 
-// CLOSE
-function closeModal() {
-  modal.classList.remove("active");
-  overlay.classList.remove("active");
-  document.body.classList.remove("no-scroll");
-}
+    bindDemoForm();
+  });
 
-// EVENTS
-closeBtn.addEventListener("click", closeModal);
-
-overlay.addEventListener("click", closeModal);
+});
 
 
-/* =========================
-  NOTIFICATION FUNCTIONS
-========================= */
 
-function showNotification(type = "success", title = "", message = "") {
-  const modal = document.getElementById("notificationModal");
-  const icon = document.getElementById("notificationIcon");
-  const titleEl = document.getElementById("notificationTitle");
-  const messageEl = document.getElementById("notificationMessage");
 
-  // 🔴 SAFETY CHECK (IMPORTANT)
-  if (!modal || !icon || !titleEl || !messageEl) {
-    console.error("Notification modal missing in HTML");
-    return;
-  }
 
-  titleEl.innerText = title || (type === "success" ? "Success" : "Error");
-  messageEl.innerText = message || "";
-
-  modal.classList.remove("success", "error");
-  modal.classList.add(type, "active");
-
-  icon.innerText = type === "success" ? "✓" : "✕";
-
-  document.body.classList.add("no-scroll");
-}
-
-function closeNotification() {
-  const modal = document.getElementById("notificationModal");
-
-  modal.classList.remove("active", "success", "error");
-
-  document.body.classList.remove("no-scroll");
-}
 
 
 
