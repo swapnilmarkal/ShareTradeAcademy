@@ -498,7 +498,7 @@ header {
     linear-gradient(rgba(2, 6, 23, 0.65),
       /* using bg-inverse tone */
       rgba(2, 6, 23, 0.75)),
-    url('https://images.pexels.com/photos/7567537/pexels-photo-7567537.jpeg?auto=compress&cs=tinysrgb&w=1600') center / cover no-repeat;
+    url('../images/banner.jpeg') center / cover no-repeat;
 
   min-height: 100vh;
   display: flex;
