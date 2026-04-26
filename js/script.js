@@ -51,12 +51,12 @@ window.addEventListener("scroll", () => {
    MOBILE NAV
 ========================= */
 const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
+const mobileNav = document.getElementById("mobileNav");
 const mobileOverlay = document.getElementById("overlay");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
-  navLinks.classList.toggle("active");
+  mobileNav.classList.toggle("active");
   mobileOverlay.classList.toggle("active");
   document.body.classList.toggle("no-scroll");
 });
@@ -65,15 +65,22 @@ hamburger.addEventListener("click", () => {
 mobileOverlay.addEventListener("click", closeMenu);
 
 /* Close when clicking any nav link */
-document.querySelectorAll(".nav-links a").forEach(link => {
+document.querySelectorAll(".mobile-nav-links a").forEach(link => {
   link.addEventListener("click", closeMenu);
 });
 
 function closeMenu() {
   hamburger.classList.remove("active");
-  navLinks.classList.remove("active");
+  mobileNav.classList.remove("active");
   mobileOverlay.classList.remove("active");
   document.body.classList.remove("no-scroll");
+}
+
+
+const mobileCloseBtn = document.getElementById("mobileCloseBtn");
+
+if (mobileCloseBtn) {
+  mobileCloseBtn.addEventListener("click", closeMenu);
 }
 
 
@@ -121,7 +128,7 @@ function initBooks() {
         <div class="book-footer">
           <h4 class="price">₹${book.price}</h4>
 
-          <button class="btn book-btn" ${isUnavailable ? "disabled" : ""}>
+          <button class="btn primary small" ${isUnavailable ? "disabled" : ""}>
             ${isUnavailable ? "Coming Soon" : "Buy Now"}
           </button>
         </div>
@@ -133,7 +140,7 @@ function initBooks() {
 
   if (BOOKS.length > 3) {
     footer.innerHTML = `
-      <a href="books.html" class="btn">View More Books</a>
+      <a href="books.html" class="btn outline">View More Books</a>
     `;
   }
 }
@@ -170,11 +177,6 @@ setInterval(() => {
 }, 4000);
 
 /* =========================
-  ICON INIT
-========================= */
-lucide.createIcons();
-
-/* =========================
 FORM TEMPLATE
 ========================= */
 function contactFormTemplate() {
@@ -204,7 +206,7 @@ function contactFormTemplate() {
         <textarea name="message" placeholder="Tell us about your interest" required></textarea>
       </div>
 
-      <button class="btn submit-btn" type="submit">Send Inquiry</button>
+      <button class="btn primary submit-btn" type="submit">Send Inquiry</button>
 
       <p id="form-status"></p>
 
@@ -213,7 +215,7 @@ function contactFormTemplate() {
 }
 
 const demoFormTemplate = `
-<form id="demoForm">
+<form id="demoForm" class="js-demo-form">
 
   <input type="hidden" name="access_key" value="370af2a5-93ab-440b-8050-3f10f1fc76a7">
   <input type="checkbox" name="botcheck" style="display:none;">
@@ -238,7 +240,7 @@ const demoFormTemplate = `
     <textarea name="message" placeholder="Tell us about your interest" required></textarea>
   </div>
 
-  <button class="btn submit-btn" type="submit">Get Free Demo</button>
+  <button class="btn primary submit-btn" type="submit">Get Free Demo</button>
 
 </form>
 `;
@@ -307,34 +309,23 @@ function bindContactForm() {
 /* =========================
   ENROLLMENT MODAL -> DEMO FORM FOR NOW
 ========================= */
+function handleEnrollClick(e) {
+  e.preventDefault();
+
+  closeMenu();
+  openModal({
+    title: "Free Demo Session",
+    body: demoFormTemplate,
+    footer: ``
+  });
+
+  bindDemoForm();
+
+}
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("navEnrollBtn").addEventListener("click", (e) => {
-    e.preventDefault();
-
-    openModal({
-      title: "Free Demo Session",
-
-      body: demoFormTemplate,
-
-      footer: ``
-    });
-
-    bindDemoForm();
+  document.querySelectorAll("[data-enroll]").forEach(btn => {
+    btn.addEventListener("click", handleEnrollClick);
   });
-  document.getElementById("sticky-enroll").addEventListener("click", (e) => {
-    e.preventDefault();
-
-    openModal({
-      title: "Free Demo Session",
-
-      body: demoFormTemplate,
-
-      footer: ``
-    });
-
-    bindDemoForm();
-  });
-
 });
 
 

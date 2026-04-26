@@ -1,3 +1,87 @@
+
+/* =========================
+  COURSE NOT FOUND (LIGHT SYSTEM)
+========================= */
+
+.not-found {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--bg-page);
+  color: var(--text-primary);
+
+  padding: 20px;
+  text-align: center;
+}
+
+/* CARD */
+.not-found-box {
+  max-width: 520px;
+
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+
+  padding: 2.2rem;
+
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(6px);
+
+  transition: all 0.25s ease;
+}
+
+/* subtle hover lift */
+.not-found-box:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* TITLE */
+.not-found-box h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* TEXT */
+.not-found-box p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* ACTIONS */
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   BUTTON OVERRIDES (THEME MATCH)
+========================= */
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  transition: all 0.25s ease;
+}
+
+.btn.secondary:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* PRIMARY BUTTON (ensure consistency if needed) */
+.btn {
+  border-radius: var(--radius-md);
+}
+
 /* =========================================
    RESET GLOBAL SECTION SPACING
 ========================================= */
@@ -11,7 +95,8 @@
 ========================================= */
 
 .course-page {
-  background: #f8fafc;
+  background: var(--bg-section);
+  color: var(--text);
 }
 
 .course-page .course-block {
@@ -22,10 +107,16 @@
   gap: 40px;
 }
 
+@media (max-width: 768px) {
+  .course-page .course-block {
+    padding: 40px 0;
+  }
+}
 
 /* =========================================================
- Hero
+ HERO
 ========================================================= */
+
 .course-hero {
   position: relative;
   padding: 120px 0 80px;
@@ -34,7 +125,7 @@
   background-position: center;
 }
 
-.course-page section.course-hero {
+.course-page .course-hero {
   padding: 90px 0;
 }
 
@@ -44,14 +135,10 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(5,15,30,0.9),
-    rgba(5,15,30,0.6),
-    rgba(5,15,30,0.3)
+    rgba(15, 23, 42, 0.92),
+    rgba(15, 23, 42, 0.72),
+    rgba(15, 23, 42, 0.45)
   );
-}
-
-.course-hero ul {
-  margin-bottom: 25px;
 }
 
 .hero-grid {
@@ -65,11 +152,13 @@
 .hero-left h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 .hero-sub {
-  max-width: 500px;
+  max-width: 520px;
   margin-bottom: 1.5rem;
+  color: rgba(255,255,255,0.78);
 }
 
 .hero-meta {
@@ -80,8 +169,9 @@
 }
 
 .hero-meta span {
-  background: rgba(0,200,150,0.15);
-  border: 1px solid rgba(0,200,150,0.3);
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.35);
+  color: #dbeafe;
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 0.8rem;
@@ -93,76 +183,130 @@
 }
 
 .hero-actions .btn.primary {
+  background: var(--color-primary);
+  color: #fff;
   padding: 10px 20px;
   font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  transition: 0.25s ease;
 }
 
-/* CARD */
+.hero-actions .btn.primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
 .hero-card {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   color: #fff;
   padding: 1.8rem;
   border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
 }
 
-/* MOBILE */
-@media(max-width:900px){
+.hero-card h3 {
+  margin-bottom: 0.6rem;
+}
+
+.hero-card .price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #dbeafe;
+  margin-bottom: 1rem;
+}
+
+.hero-card ul {
+  margin-bottom: 25px;
+  padding-left: 18px;
+}
+
+.hero-card ul li {
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.8);
+}
+
+.hero-card .btn.full {
+  width: 100%;
+  text-align: center;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 10px;
+  transition: 0.25s ease;
+}
+
+.hero-card .btn.full:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
   }
 
-  .enroll-card {
-    position: static;
+  .hero-left h1 {
+    font-size: 2.2rem;
   }
 
-  .card-grid {
-    grid-template-columns: 1fr;
+  .hero-card {
+    margin-top: 20px;
   }
 }
-
 /* =========================================
-   ACCORDION SECTION
+   ACCORDION (FAQ-ALIGNED THEME)
 ========================================= */
 
 .accordion {
-  max-width: 900px;
+  max-width: 850px; /* match FAQ */
   margin: 0 auto;
 }
 
 /* ITEM */
 .accordion-item {
-  background: #fff;
-  border-radius: 14px;
-  margin-bottom: 1rem;
-  border: 1px solid rgba(0,0,0,0.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  margin-bottom: var(--space-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  transition: 0.25s ease;
+
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
 }
 
 .accordion-item:hover {
-  box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 /* HEADER */
 .accordion-header {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 1.2rem 1.4rem;
-  font-size: 0.95rem;
+  padding: var(--space-lg);
   font-weight: 600;
-  text-align: left;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+
+  width: 100%;
+  border: none;
   cursor: pointer;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  font-size: 0.95rem;
 }
 
-.accordion-header i {
+/* icon (kept like FAQ + modern accent) */
+.accordion-header i,
+.accordion-header .icon {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
   transition: transform 0.3s ease;
 }
 
@@ -170,62 +314,65 @@
 .accordion-body {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
-  padding: 0 1.4rem;
+
+  background: var(--bg-section);
+  color: var(--text-secondary);
+
+  padding: 0 var(--space-lg);
+  transition: max-height 0.35s ease, padding 0.35s ease;
 }
 
-.accordion-body p {
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.6;
-  padding-bottom: 1.2rem;
-}
-
-/* ACTIVE STATE */
+/* ACTIVE */
 .accordion-item.active .accordion-body {
-  max-height: 300px;
+  max-height: 260px;
+  padding: var(--space-lg);
 }
 
+/* text */
+.accordion-body p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* optional rotation if using icon */
 .accordion-item.active .accordion-header i {
   transform: rotate(180deg);
 }
 
 /* MOBILE */
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .accordion-header {
     font-size: 0.9rem;
   }
 }
 
-/* =========================================
-   DARK SECTION (BENEFITS + FEATURES)
-========================================= */
-
+/* =========================
+   BENEFITS AND FEATURES
+========================= */
 .course-page .course-block.dark {
-  /* background: #050f1e; */
-  background: radial-gradient(circle at top, #0b1f3a, #050f1e);
-  color: #fff;
+  background: var(--bg-page);
+  color: var(--text-primary);
 }
 
-/* headings + text */
-.course-page .course-block.light .section-title {
-  color: #fff;
-}
-
-.course-page .course-block.light .section-sub {
-  color: rgba(255,255,255,0.7);
-}
-
-/* GRID */
 .dual-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
 }
 
+.course-page .course-block .section-title {
+  color: var(--text-primary);
+}
+
+.course-page .course-block .section-sub {
+  color: var(--text-secondary);
+}
+
 /* =========================
-   BENEFIT CARDS (highlighted)
+   BENEFITS GRID 
 ========================= */
+
 .benefit-grid {
   display: grid;
   gap: 1rem;
@@ -233,27 +380,36 @@
 }
 
 .benefit-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(6px);
-  border-radius: 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
   padding: 1.2rem;
-  font-size: 0.95rem;
   display: flex;
-  gap: 0.8rem;
   align-items: flex-start;
-  color: rgba(255,255,255,0.9);
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
 }
 
 .benefit-card::before {
-  content: "✓";
-  color: #00c896;
-  font-weight: bold;
+  content: "✔";
+  color: var(--color-primary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.benefit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(59, 130, 246, 0.25);
 }
 
 /* =========================
-   FEATURE CARDS (clean blocks)
+   FEATURES GRID 
 ========================= */
+
 .feature-grid {
   display: grid;
   gap: 1rem;
@@ -261,33 +417,47 @@
 }
 
 .feature-card {
-  background: rgba(0,200,150,0.08);
-  border: 1px solid rgba(0,200,150,0.3);
-  border-radius: 14px;
+  background: var(--bg-section);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
   padding: 1.2rem;
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.9);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
 }
 
-/* =========================
-   HOVER EFFECT (premium feel)
-========================= */
-.benefit-card:hover,
+.feature-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--color-primary);
+  opacity: 0.6;
+}
+
 .feature-card:hover {
   transform: translateY(-3px);
-  transition: all 0.25s ease;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: var(--shadow-md);
 }
 
-/* MOBILE */
-@media(max-width:900px){
+/* RESPONSIVE */
+@media (max-width: 900px) {
   .dual-section {
     grid-template-columns: 1fr;
   }
 }
 
+
 /* =========================
-   Audience + Outcomes 
+   AUDIENCE SECTION (LIGHT SYSTEM)
 ========================= */
 
 .audience-grid {
@@ -297,45 +467,88 @@
   margin-top: 2rem;
 }
 
+/* CARD BASE */
 .audience-card {
-  background: #fff;
-  border-radius: 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+
   padding: 1.8rem;
-  border: 1px solid rgba(0,0,0,0.05);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
 }
 
+/* hover */
+.audience-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* heading */
 .audience-card h3 {
   margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
 }
 
+/* list reset */
 .audience-card ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
+/* list items */
 .audience-card li {
   margin-bottom: 0.7rem;
   padding-left: 22px;
   position: relative;
+
   font-size: 0.95rem;
+  color: var(--text-secondary);
 }
 
+/* check icon */
 .audience-card li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  color: var(--accent);
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
-/* Highlight right side */
+/* =========================
+   HIGHLIGHT CARD (RIGHT SIDE)
+========================= */
+
 .audience-card.highlight {
-  background: linear-gradient(to bottom, #ffffff, #f0fdf9);
-  border: 1px solid rgba(0,200,150,0.2);
+  background: var(--bg-section);
+  border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
-/* MOBILE */
-@media(max-width:900px){
+/* subtle accent strip (premium touch) */
+.audience-card.highlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.audience-card.highlight::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-primary);
+  opacity: 0.8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
   .audience-grid {
     grid-template-columns: 1fr;
   }

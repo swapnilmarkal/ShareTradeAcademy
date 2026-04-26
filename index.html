@@ -8,11 +8,14 @@
     content="Best stock market classes in Mumbai. Learn intraday trading, options trading, and technical analysis with live mentorship. Offline classes in Malad, Mumbai.">
   <title>Stock Market Classes in Mumbai | ShareTrade Academy</title>
 
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.svg">
 
   <!-- Scripts -->
   <script src="js/form-handler.js" defer></script>
@@ -20,7 +23,9 @@
   <script src="js/script.js" defer></script>
   <script src="js/modal.js" defer></script>
   <script src="js/notification.js" defer></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- ICONS -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
 </head>
 
@@ -28,8 +33,11 @@
   <!-- HEADER -->
   <header>
     <div class="container nav">
+
       <a href="#home" class="logo">
-        <img src="images/logo.png" class="logo-desktop" alt="Share Trade Academy">
+        <span class="logo-text">
+          Share<span class="logo-accent">Trade</span> Academy
+        </span>
       </a>
 
       <button class="hamburger" id="hamburger" aria-label="menu">
@@ -38,13 +46,13 @@
         <span class="bar"></span>
       </button>
 
-      <nav>
-        <ul class="nav-links" id="navLinks">
+      <!-- DESKTOP NAV -->
+      <nav class="desktop-nav">
+        <ul class="desktop-links">
           <li><a href="index.html">Home</a></li>
 
           <li class="has-dropdown">
             <a href="#programs">Courses</a>
-
             <div class="dropdown">
               <a href="course.html?course=advance">Advanced Course</a>
               <a href="course.html?course=intraday">Intraday Course</a>
@@ -55,18 +63,48 @@
           <li><a href="index.html#books">Books</a></li>
           <li><a href="index.html#results">Testimonials</a></li>
           <li><a href="index.html#contact">Contact</a></li>
-          <li><a href="#" class="btn small enroll-btn" id="navEnrollBtn">Enroll Now</a></li>
+
+          <li>
+            <a href="#" class="btn primary small enroll-btn" id="navEnrollBtn" data-enroll>
+              Enroll Now
+            </a>
+          </li>
         </ul>
       </nav>
 
     </div>
   </header>
 
-  <!-- Empty Space -->
-  <div class="empty-space" id="home"></div>
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <span class="logo-text">
+        Share<span class="logo-accent">Trade</span> Academy
+      </span>
+
+      <button class="mobile-close" id="mobileCloseBtn">×</button>
+    </div>
+    <ul class="mobile-nav-links">
+
+      <li><a href="#">Home</a></li>
+      <li><a href="course.html?course=advance">Advanced Course</a></li>
+      <li><a href="course.html?course=intraday">Intraday Course</a></li>
+      <li><a href="course.html?course=fno">F&O Course</a></li>
+      <li><a href="index.html#books">Books</a></li>
+      <li><a href="index.html#results">Testimonials</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+
+      <li>
+        <a href="#" class="btn primary small" id="mobileEnrollBtn" data-enroll>
+          Enroll Now
+        </a>
+      </li>
+
+    </ul>
+  </div>
 
   <!-- Ticker Tape -->
-  <div style="height: 60px; overflow: hidden; position: relative;">
+  <div class="ticker-tape-container">
     <tv-ticker-tape
       symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD"
       item-size="compact" show-hover></tv-ticker-tape>
@@ -81,7 +119,7 @@
           Learn technical analysis, price action, options trading, and risk management through structured, real-market
           training.
         </p>
-        <a href="#programs" class="btn">Explore Courses</a>
+        <a href="#programs" class="btn primary">Explore Courses</a>
       </div>
 
       <div class="hero-card">
@@ -112,8 +150,7 @@
 
         <!-- LEFT: IMAGE -->
         <div class="mentor-img">
-          <img src="images/lead-mentor.png"
-            alt="Lead Mentor">
+          <img src="images/lead-mentor.png" alt="Lead Mentor">
         </div>
 
         <!-- RIGHT: CONTENT -->
@@ -195,7 +232,7 @@
 
             <div class="course-footer">
               <span class="price">₹14,000</span>
-              <a href="course.html?course=advance" class="btn small">View Details</a>
+              <a href="course.html?course=advance" class="btn primary small">View Details</a>
             </div>
           </div>
         </div>
@@ -221,7 +258,7 @@
 
             <div class="course-footer">
               <span class="price">₹5,000</span>
-              <a href="course.html?course=intraday" class="btn small">View Details</a>
+              <a href="course.html?course=intraday" class="btn primary small">View Details</a>
             </div>
           </div>
         </div>
@@ -247,7 +284,7 @@
 
             <div class="course-footer">
               <span class="price">₹8,000</span>
-              <a href="course.html?course=fno" class="btn small">View Details</a>
+              <a href="course.html?course=fno" class="btn primary small">View Details</a>
             </div>
           </div>
         </div>
@@ -288,7 +325,7 @@
             for anyone serious about learning trading and investing."</p>
           <div class="user">
             <div class="user-icon female">
-              <i data-lucide="user-round"></i>
+              <i class="ph ph-user"></i>
             </div>
             <div>
               <strong>Deepali Gadkari</strong>
@@ -305,7 +342,7 @@
             become an independent trader or invester"</p>
           <div class="user">
             <div class="user-icon male">
-              <i data-lucide="user-round"></i>
+              <i class="ph ph-user"></i>
             </div>
             <div>
               <strong>Serp Hos</strong>
@@ -321,7 +358,7 @@
             Teaching is very simple and effective"</p>
           <div class="user">
             <div class="user-icon male">
-              <i data-lucide="user-round"></i>
+              <i class="ph ph-user"></i>
             </div>
             <div>
               <strong>Naresh OMakwana</strong>
@@ -337,7 +374,7 @@
             recommend!"</p>
           <div class="user">
             <div class="user-icon male">
-              <i data-lucide="user-round"></i>
+              <i class="ph ph-user"></i>
             </div>
             <div>
               <strong>Ashok Jayna</strong>
@@ -353,7 +390,7 @@
             enhanced my learning experience. Overall, it was an excellent course that I would highly recommend!"</p>
           <div class="user">
             <div class="user-icon male">
-              <i data-lucide="user-round"></i>
+              <i class="ph ph-user"></i>
             </div>
             <div>
               <strong>Nikhil Sawatkar</strong>
@@ -368,7 +405,7 @@
             market. Unleashing the knowledge to the last level later by layer. Worth learning"</p>
           <div class="user">
             <div class="user-icon male">
-              <i data-lucide="user-round"></i>
+              <i class="ph ph-user"></i>
             </div>
             <div>
               <strong>Kuldeep Kewlani</strong>
@@ -384,7 +421,7 @@
           </p>
           <div class="user">
             <div class="user-icon male">
-              <i data-lucide="user-round"></i>
+              <i class="ph ph-user"></i>
             </div>
             <div>
               <strong>Prathamesh Dubey</strong>
@@ -399,7 +436,7 @@
 
       <div class="review-cta">
         <a href="https://www.google.com/maps/place/ShareTrade+Academy/@19.1869048,72.8485975,17z/data=!4m16!1m9!3m8!1s0x3be7a95c8a8fd55b:0x7db5413bfd61e0c4!2sShareTrade+Academy!8m2!3d19.1869048!4d72.8511724!9m1!1b1!16s%2Fg%2F11s1cndqmd!3m5!1s0x3be7a95c8a8fd55b:0x7db5413bfd61e0c4!8m2!3d19.1869048!4d72.8511724!16s%2Fg%2F11s1cndqmd?entry=ttu&g_ep=EgoyMDI2MDQxOS4wIKXMDSoASAFQAw%3D%3D"
-          target="_blank" class="btn">
+          target="_blank" class="btn outline">
           View All Reviews on Google
         </a>
       </div>
@@ -528,29 +565,21 @@
           </p>
 
           <div class="socials">
-            <a href="https://www.instagram.com/sharetradeacademy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              target="_blank" class="social-btn" title="Instagram">
-              <svg viewBox="0 0 24 24">
-                <path
-                  d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.2A4.8 4.8 0 1 0 12 17a4.8 4.8 0 0 0 0-9.6zm0 2A2.8 2.8 0 1 1 12 15a2.8 2.8 0 0 1 0-5.6zm4.8-2.3a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z" />
-              </svg>
+
+            <a href="https://www.instagram.com/sharetradeacademy" target="_blank" class="social-btn" title="Instagram">
+              <i class="ph ph-instagram-logo"></i>
             </a>
 
             <a href="https://t.me/sharetradeacademy" target="_blank" class="social-btn" title="Telegram">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
-                stroke="currentColor" stroke-width="2">
-                <path
-                  d="M21.8 4.1L3.3 9.3c-1.4.6-1.3 2.6.1 3.1l4.4 1.4 1.7 5.3c.4 1.3 2.1 1.6 3 .6l2.7-2.9 4.4 3.2c1 .7 2.4.1 2.6-1.1l2.6-14.8z" />
-                <path d="M9.2 13.2l8.9-5.6-7.1 6.7-.3 3.2-1.5-4.3z" />
-              </svg>
+              <i class="ph ph-telegram-logo"></i>
             </a>
 
             <a href="tel:+918828597226" class="social-btn" title="Phone">
-              <i data-lucide="phone"></i>
+              <i class="ph ph-phone"></i>
             </a>
 
             <a href="mailto:info@sharetradeacademy.in" class="social-btn" title="Email">
-              <i data-lucide="mail"></i>
+              <i class="ph ph-envelope-simple"></i>
             </a>
 
           </div>
@@ -572,11 +601,30 @@
         <!-- Contact -->
         <div>
           <h4 class="footer-title">Contact</h4>
+
           <div class="footer-contact">
-            <p><i data-lucide="mail"></i> info@sharetradeacademy.in</p>
-            <p><i data-lucide="phone"></i> +91-8828597226</p>
-            <p><i data-lucide="map-pin"></i> 502/Shukra Building,<br> Diamond Market,<br> Daftary Road,<br> Primal
-              Nagar,<br> Malad East,<br> Mumbai,<br>Maharashtra 400097</p>
+
+            <p>
+              <i class="ph ph-envelope-simple"></i>
+              info@sharetradeacademy.in
+            </p>
+
+            <p>
+              <i class="ph ph-phone"></i>
+              +91-8828597226
+            </p>
+
+            <p>
+              <i class="ph ph-map-pin"></i>
+              502/Shukra Building,<br>
+              Diamond Market,<br>
+              Daftary Road,<br>
+              Primal Nagar,<br>
+              Malad East,<br>
+              Mumbai,<br>
+              Maharashtra 400097
+            </p>
+
           </div>
         </div>
 
@@ -588,9 +636,9 @@
     </div>
   </footer>
 
-  <!-- Sticky Button: Enroll Now -->
-  <div class="sticky-cta" id="sticky-enroll">
-    <a href="#" class="btn">Enroll Now</a>
+  <!-- Sticky Button For Mobile: Enroll Now -->
+  <div class="sticky-cta">
+    <a href="#" id="sticky-enroll" data-enroll>Enroll Now</a>
   </div>
 
   <!-- Modal -->
@@ -641,14 +689,9 @@
   <!-- Overlay -->
   <div class="overlay" id="overlay"></div>
 
-  <!--  Overlay -->
-  <div class="overlay" id="overlay"></div>
-
   <!-- Ticker Tape Script -->
   <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
 
-  <!-- Enroll Modal Script -->
-  <!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
 </body>
 
 </html>
