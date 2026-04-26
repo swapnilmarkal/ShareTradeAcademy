@@ -55,15 +55,30 @@ function initCourseBasics() {
    HERO META + SIDEBAR
 ========================= */
 
+// function renderQuickFeatures() {
+//   const heroMeta = $("heroMeta");
+//   const quickFeatures = $("quickFeatures");
+
+//   course.quick.forEach(item => {
+//     const span = document.createElement("span");
+//     span.innerText = item;
+//     heroMeta.appendChild(span);
+
+//     const li = document.createElement("li");
+//     li.innerHTML = `
+//       <i class="ph ph-check"></i>
+//       <span>${item}</span>
+//     `;
+//     quickFeatures.appendChild(li);
+//   });
+// }
+
 function renderQuickFeatures() {
   const heroMeta = $("heroMeta");
   const quickFeatures = $("quickFeatures");
 
+  // QUICK ITEMS
   course.quick.forEach(item => {
-    const span = document.createElement("span");
-    span.innerText = item;
-    heroMeta.appendChild(span);
-
     const li = document.createElement("li");
     li.innerHTML = `
       <i class="ph ph-check"></i>
@@ -71,6 +86,20 @@ function renderQuickFeatures() {
     `;
     quickFeatures.appendChild(li);
   });
+
+  // MODULE TITLES (NEW)
+  if (course.modules && course.modules.length) {
+    course.modules.forEach(module => {
+      const span = document.createElement("span");
+
+      // optional styling hook
+      span.className = "hero-module-pill";
+
+      span.innerText = module.title;
+
+      heroMeta.appendChild(span);
+    });
+  }
 }
 
 /* =========================

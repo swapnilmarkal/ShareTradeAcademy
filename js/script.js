@@ -85,6 +85,52 @@ if (mobileCloseBtn) {
 
 
 /* =========================
+   COURSE CARDS
+========================= */
+function renderCourseCards() {
+  const grid = document.querySelector(".course-grid");
+  if (!grid) return;
+
+  grid.innerHTML = "";
+
+  Object.keys(COURSES).forEach(key => {
+    const course = COURSES[key];
+
+    const card = document.createElement("div");
+    card.className = "course-card premium";
+
+    card.innerHTML = `
+      <div class="course-img">
+        <img src="${course.heroImage}" alt="${course.title}">
+        <span class="course-tag">${course.modules?.[0]?.title || "Course"}</span>
+      </div>
+
+      <div class="course-content">
+        <h3>${course.title}</h3>
+        <p class="course-sub">${course.subtitle}</p>
+
+        <ul class="course-points">
+          ${course.quick.slice(0, 3).map(q => `<li>✔ ${q}</li>`).join("")}
+        </ul>
+
+        <div class="course-footer">
+          <span class="price">${course.price}</span>
+          <a href="course.html?course=${key}" class="btn primary small">
+            View Details
+          </a>
+        </div>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderCourseCards();
+});
+
+/* =========================
    LOAD BOOKS
 ========================= */
 document.addEventListener("DOMContentLoaded", () => {
