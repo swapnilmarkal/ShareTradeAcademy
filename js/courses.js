@@ -4,7 +4,7 @@ const COURSES = {
     title: "Advanced Share Market Course",
     subtitle: "Master trading with real market strategies and structured learning.",
     price: "₹14,000",
-    heroImage: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800",
+    heroImage: "./images/courses/advance-banner.jpeg",
 
     details: [
       {
@@ -85,7 +85,7 @@ const COURSES = {
     title: "Intraday Trading Course",
     subtitle: "Master fast-paced trading and same-day profit strategies.",
     price: "₹5,000",
-    heroImage: "https://images.pexels.com/photos/210990/pexels-photo-210990.jpeg?auto=compress&cs=tinysrgb&w=800",
+    heroImage: "./images/courses/intraday-banner.jpeg",
 
     details: [
       {
@@ -190,7 +190,7 @@ const COURSES = {
     title: "Futures & Options Course",
     subtitle: "Trade derivatives with advanced strategies and risk control.",
     price: "₹8,000",
-    heroImage: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800",
+    heroImage: "./images/courses/f&o-banner.jpeg",
 
     details: [
       {
