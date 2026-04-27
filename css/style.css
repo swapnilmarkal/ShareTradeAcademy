@@ -1488,7 +1488,7 @@ header {
   padding: 16px 18px;
   background: linear-gradient(
     to right,
-    rgba(0, 200, 150, 0.08),
+    rgba(37, 59, 130, 0.08),
     transparent
   );
 
@@ -1514,8 +1514,8 @@ header {
 }
 
 .modal-close:hover {
-  background: rgba(0, 200, 150, 0.15);
-  border-color: rgba(0, 200, 150, 0.3);
+  background: rgba(45, 62, 142, 0.15);
+  border-color: rgba(42, 70, 147, 0.3);
 }
 
 .modal-body {
